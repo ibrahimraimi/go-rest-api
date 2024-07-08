@@ -28,7 +28,7 @@ func (s *APIServer) Run() error {
 	userHandler := user.NewHandler()
 	userHandler.RegisterRoutes(subrouter)
 
-	log.Printf("Server running on", s.addr)
+	log.Println("Server running on", s.addr)
 
 	return http.ListenAndServe(s.addr, router)
 }
